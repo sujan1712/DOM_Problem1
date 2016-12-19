@@ -1,0 +1,14 @@
+include ../../mixins/form-helper
+form(name='tip-calculator' method='POST' action='/tip-calculator')
+    h1 Tip Calculator
+    input(type='text' name='Amount' value='enter an amount' id ='amt')
+    br
+    br
+    br
+    +SelectCreator('Percent',['How much?','10%','15%','20%'])    
+    br
+    br
+    br
+    input(type='button' name='CalculateTip' value='Calculate Tip' id='calc')
+    p(id='pOutput')
+    script(src='/javascripts/app.js')
